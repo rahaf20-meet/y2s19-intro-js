@@ -18,17 +18,27 @@ var randomInt = getRandomInt(1, 100);
 /* END STARTING CODE */
 
 // your code goes under here
+function guess(){
+	return parseInt(prompt("guess again"));
+}
 var num = prompt("guess a number");
+num = parseInt(num);
+console.log(randomInt);
+while(num < randomInt || num > randomInt){
+	if(num > randomInt){
+		alert("TOO HIGH!!"); 
+		num = guess()
+		}
 
-while(num > randomInt){
-	console.log("TOO HIGH!!");
-	}
-while(num < randomInt){
-	console.log("too looooowww!!");
-	}
-while(num = randomInt){
-	console.log("RIGHT!!!!!");
-	}
+	else if(num < randomInt){
+		alert("too looooowww!!");
+		num = guess()
+		}
+	
+}
+if (num ==randomInt){
+	alert("CONGRATULATIONS!!! YOU GUESSED IT RIGHT"); 
+		}
     </script>
 
 </body>
